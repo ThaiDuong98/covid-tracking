@@ -74,29 +74,23 @@ const Home = () => {
 
         if (dataSort === 1) {
           setCountries(countryList);
-          return
+          return;
         } else if (dataSort === 2) {
           for (let i = 0; i < countryList.length; i++) {
             if (countryList[i]?.TotalConfirmed > firstCountry?.TotalConfirmed) {
-              country = sortByCountry(countryList[i])
+              country = sortByCountry(countryList[i]);
             }
           }
         } else if (dataSort === 3) {
           for (let i = 0; i < countryList.length; i++) {
             if (countryList[i]?.TotalDeaths > firstCountry?.TotalDeaths) {
-              country = sortByCountry(countryList[i])
+              country = sortByCountry(countryList[i]);
             }
           }
         } else {
           for (let i = 0; i < countryList.length; i++) {
             if (countryList[i]?.TotalRecovered < firstCountry?.TotalRecovered) {
-             country = sortByCountry(countryList[i])
-              // country = {
-              //   Country: countryList[i]?.Country,
-              //   TotalConfirmed: countryList[i]?.TotalConfirmed,
-              //   TotalDeaths: countryList[i]?.TotalDeaths,
-              //   TotalRecovered: countryList[i]?.TotalRecovered,
-              // };
+              country = sortByCountry(countryList[i]);
             }
           }
         }
